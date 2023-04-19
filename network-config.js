@@ -16,12 +16,12 @@ const networkConfig = {
       "971f006163a12ee3383a00d7743334480d6b1c83fdf60497e0c520b16d1a4ee421cc61375679b63466156fee6f2f1da5a7e630ba0b1cddb2704ef907ead223db",
     mockFunctionsPrivateKey: "0x09768a19def4dce2b6793d7dc807828ef47b681709cf1005627a93f0da9c8065",
   },
-  mainnet: {
-    linkToken: "0x514910771af9ca656af840dff83e8264ecf986ca",
-  },
-  polygon: {
-    linkToken: "0xb0897686c545045afc77cf20ec7a532e3120e0f1",
-  },
+  // mainnet: {
+  //   linkToken: "0x514910771af9ca656af840dff83e8264ecf986ca",
+  // },
+  // polygon: {
+  //   linkToken: "0xb0897686c545045afc77cf20ec7a532e3120e0f1",
+  // },
   mumbai: {
     linkToken: "0x326C977E6efc84E512bB9C30f76E30c160eD06FB",
     linkEthPriceFeed: "0x12162c3E810393dEC01362aBf156D7ecf6159528",
@@ -30,14 +30,14 @@ const networkConfig = {
     functionsPublicKey:
       "a30264e813edc9927f73e036b7885ee25445b836979cb00ef112bc644bd16de2db866fa74648438b34f52bb196ffa386992e94e0a3dc6913cee52e2e98f1619c",
   },
-  sepolia: {
-    linkToken: "0x779877A7B0D9E8603169DdbD7836e478b4624789",
-    linkEthPriceFeed: "0x42585eD362B3f1BCa95c640FdFf35Ef899212734",
-    functionsOracleProxy: "0x649a2C205BE7A3d5e99206CEEFF30c794f0E31EC",
-    functionsBillingRegistryProxy: "0x3c79f56407DCB9dc9b852D139a317246f43750Cc",
-    functionsPublicKey:
-      "a30264e813edc9927f73e036b7885ee25445b836979cb00ef112bc644bd16de2db866fa74648438b34f52bb196ffa386992e94e0a3dc6913cee52e2e98f1619c",
-  },
+  // sepolia: {
+  //   linkToken: "0x779877A7B0D9E8603169DdbD7836e478b4624789",
+  //   linkEthPriceFeed: "0x42585eD362B3f1BCa95c640FdFf35Ef899212734",
+  //   functionsOracleProxy: "0x649a2C205BE7A3d5e99206CEEFF30c794f0E31EC",
+  //   functionsBillingRegistryProxy: "0x3c79f56407DCB9dc9b852D139a317246f43750Cc",
+  //   functionsPublicKey:
+  //     "a30264e813edc9927f73e036b7885ee25445b836979cb00ef112bc644bd16de2db866fa74648438b34f52bb196ffa386992e94e0a3dc6913cee52e2e98f1619c",
+  // },
 }
 
 // This is set to 2 for speed & convenience.  For mainnet deployments, it is recommended to set this to 6 or higher
