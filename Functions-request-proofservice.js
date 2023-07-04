@@ -6,11 +6,12 @@
 // Refer to https://github.com/smartcontractkit/functions-hardhat-starter-kit#javascript-code
 
 // Arguments can be provided when a request is initated on-chain and used in the request source code as shown below
-const avatar = args[0]
+const platform = args[0]
+const identity = args[1]
 
 // make HTTP request
-const url = `http://localhost:8000/api/v1/test-api`
-console.log(`HTTP GET Request to ${url}?avatar=${avatar}`)
+const url = `https://proof-service.next.id/v1/proof`
+console.log(`HTTP GET Request to ${url}?platform=${platform}&identity=${identity}`)
 
 // construct the HTTP Request object. See: https://github.com/smartcontractkit/functions-hardhat-starter-kit#javascript-code
 // params used for URL query parameters
@@ -18,7 +19,8 @@ console.log(`HTTP GET Request to ${url}?avatar=${avatar}`)
 const testAPIRequest = Functions.makeHttpRequest({
   url: url,
   params: {
-    avatar: avatar,
+    platform: platform,
+    identity: identity,
   },
 })
 
@@ -36,9 +38,9 @@ if (data.Response === "Error") {
 }
 
 // extract the price
-const isValidate = data["is_validate"]
-console.log(`resp is: ${isValidate}`)
+const avatar = data["ids"][0]["avatar"]
+console.log(`resp is: ${avatar}`)
 
 // Solidity doesn't support decimals so multiply by 100 and round to the nearest integer
 // Use Functions.encodeUint256 to encode an unsigned integer to a Buffer
-return isValidate
+return Functions.encodeString(avatar)
