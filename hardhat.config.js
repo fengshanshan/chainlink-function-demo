@@ -110,7 +110,7 @@ module.exports = {
     //   nativePriceFeed: "0xab594600376ec9fd91f8e885dadf0ce036862de0",
     //   mainnet: true,
     // },
-    mumbai: {
+    polygonMumbai: {
       url: MUMBAI_RPC_URL ?? "UNSET",
       accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
       chainId: 80001,
@@ -135,7 +135,7 @@ module.exports = {
       // mainnet: ETHERSCAN_API_KEY,
       // polygon: POLYGONSCAN_API_KEY,
       // sepolia: ETHERSCAN_API_KEY,
-      polygonMumbai: "97D4Y4K3UJW3KGM8R82RT1DDQHTY4BNZ9P",
+      polygonMumbai: POLYGONSCAN_API_KEY,
     },
   },
   gasReporter: {
