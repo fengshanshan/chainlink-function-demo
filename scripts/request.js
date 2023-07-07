@@ -45,8 +45,8 @@ async function main() {
   const requestGas = 5500000
 
   // Default example
-  const source = await fs.readFile("./Functions-request-source.js", "utf8")
-  const args = ["ETH", "USD"]
+  const source = await fs.readFile("./Functions-request-proofservice.js", "utf8")
+  const args = ["nextid", "0x02d7c5e01bedf1c993f40ec302d9bf162620daea93a7155cd9a8019ae3a2c2a476"]
 
   // Tutorial 6
   //const source = await fs.readFile('./examples/Functions-source-inline-secrets.js', 'utf8')
