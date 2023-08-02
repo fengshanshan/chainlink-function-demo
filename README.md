@@ -35,13 +35,9 @@ Decoded as a uint256: 1003757
 
 Actual amount billed to subscription #1873:
 
-│         Type         │           Amount            │
-|:---------------------|:----------------------------|
-│  Transmission cost:  │  0.000095387476493105 LINK  │
-│      Base fee:       │          0.2 LINK           │
-│                      │                             │
-│     Total cost:      │  0.200095387476493105 LINK  │
-
-
-
+|  Type |  Amount |
+|:---|:---|
+|  Transmission cost:   | 0.000095387476493105 LINK   |
+|   Base fee:  |    0.2 LINK |
+|  Total cost:    |  0.200095387476493105 LINK   |
 
