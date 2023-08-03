@@ -10,13 +10,13 @@ const platformParam = args[0]
 const identityParam = args[1]
 
 // make HTTP request
-const url = `https://proof-service.nextnext.id/v1/proof`
-console.log(`HTTP GET Request to ${url}?fsyms=${fromSymbol}&tsyms=${toSymbol}`)
+const url = `https://proof-service.nextnext.id/v1/proof?`
+console.log(`HTTP GET Request to ${url}?platform=${platformParam}&identity=${identityParam}`)
 
 // construct the HTTP Request object. See: https://github.com/smartcontractkit/functions-hardhat-starter-kit#javascript-code
 // params used for URL query parameters
-// Example of query: https://proof-service.nextnext.id/v1/proof?platform=nextid&identity=0x02d7c5e01bedf1c993f40ec302d9bf162620daea93a7155cd9a8019ae3a2c2a476
-const connectRequest = Functions.makeHttpRequest({
+// Example of query: https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD
+const testAPIRequest = Functions.makeHttpRequest({
   url: url,
   params: {
     platform: platformParam,
@@ -25,13 +25,13 @@ const connectRequest = Functions.makeHttpRequest({
 })
 
 // Execute the API request (Promise)
-const connectionResponse = await connectRequest
-if (connectionResponse.error) {
-  console.error(connectionResponse.error)
+const testAPIResponse = await testAPIRequest
+if (testAPIResponse.error) {
+  console.error(testAPIResponse.error)
   throw Error("Request failed")
 }
 
-const data = connectionResponse["data"]
+const data = testAPIResponse["data"]
 if (data.Response === "Error") {
   console.error(data.Message)
   throw Error(`Functional error. Read message: ${data.Message}`)
@@ -39,7 +39,8 @@ if (data.Response === "Error") {
 
 // extract the price
 const avatar = data["ids"][0]["avatar"]
-console.log(`The avatar of ${identityParam} in ${platformParam} is  ${avatar}`)
+console.log(`resp is: ${avatar}`)
+console.log(`encode resp is: ${Functions.encodeString(avatar)}`)
 
 // Solidity doesn't support decimals so multiply by 100 and round to the nearest integer
 // Use Functions.encodeUint256 to encode an unsigned integer to a Buffer

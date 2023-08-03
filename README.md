@@ -26,7 +26,7 @@ Balance: 1.0 LINK
 
 ## Example of result
 
-Consumer Contract Address: 0xa6d51377d1b6f3c8570D024f974e669C69ef0929
+Consumer Contract Address: 0xa6d51377d1b6f3c8570D024f974e669C69ef0929 (mumbai network)
 
 Response returned to client contract represented as a hex string: 0x00000000000000000000000000000000000000000000000000000000000f50ed
 Decoded as a uint256: 1003757

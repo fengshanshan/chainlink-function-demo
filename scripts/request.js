@@ -29,7 +29,7 @@ async function main() {
   const signer = new ethers.Wallet(signerPrivateKey, provider)
 
   // Consumer contract
-  const consumerAddress = "0xE99b3C67f11083AD14dF76114A80Eb8b82f029B0"
+  const consumerAddress = "0xa6d51377d1b6f3c8570D024f974e669C69ef0929"
   const consumerAbiPath = "./build/artifacts/contracts/FunctionsConsumer.sol/FunctionsConsumer.json"
   const contractAbi = JSON.parse(await fs.readFile(consumerAbiPath, "utf8")).abi
   const consumerContract = new ethers.Contract(consumerAddress, contractAbi, signer)
@@ -40,7 +40,7 @@ async function main() {
 
   // Chainlink Functions request config
   // Chainlink Functions subscription ID
-  const subscriptionId = 587
+  const subscriptionId = 2006
   // Gas limit for the Chainlink Functions request
   const requestGas = 5500000
 
