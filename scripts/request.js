@@ -142,8 +142,9 @@ async function main() {
   // Decode and print the latest response
   let latestResponse = await consumerContract.latestResponse()
   if (latestResponse.length > 0 && latestResponse !== "0x") {
-    latestResponse = BigInt(await latestResponse).toString()
-    console.log("Stored value is: " + latestResponse)
+    console.log(`latestResponse value is: ${latestResponse}`)
+    const result = Buffer.from(latestResponse.slice(2), "hex").toString()
+    console.log(`Stored value is: ${result}`)
   }
 }
 
